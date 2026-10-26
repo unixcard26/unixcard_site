@@ -47,7 +47,7 @@ export const home = {
     description:
       'Cartões, crédito, conta digital e serviços para o seu dia a dia com segurança.',
     cta: 'Conheça a Unixcard',
-    href: '/institucional',
+    href: '#sobre',
     image: '/images/home/hero.webp',
     alt: 'Mulher sorridente de terno azul segurando um smartphone',
   },
@@ -72,7 +72,7 @@ export const home = {
     after: ' em todos os lugares',
     description:
       'A Unixcard conecta pessoas e empresas a soluções financeiras para facilitar o dia a dia e impulsionar negócios.',
-    image: '/images/home/about.png',
+    image: '/images/home/about-v2.png',
     alt: 'Pessoas conectadas pelo celular e mapa iluminado de Santa Catarina junto à Ponte Hercílio Luz',
     cta: 'Conheça a Unixcard',
     href: '/institucional',

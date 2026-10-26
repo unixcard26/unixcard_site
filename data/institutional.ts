@@ -60,7 +60,7 @@ export const institutional = {
         icon: 'users',
       },
     ] as { title: string; description: string; icon: InstitutionalIcon }[],
-    image: '/images/institutional/bridge.webp',
+    image: '/images/institutional/bridge.png',
     alt: 'Ponte Hercílio Luz em Florianópolis ao entardecer',
   },
   ecosystem: {
