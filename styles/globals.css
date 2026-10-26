@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+@import './tokens.css';
+@import './layout.css';
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+  body {
+    margin: var(--spacing-0);
+    color: var(--color-ink);
+    background: var(--color-white);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  :focus-visible {
+    outline: var(--focus-width) solid var(--color-title);
+    outline-offset: var(--focus-offset);
+  }
+  img,
+  svg {
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  .unix-container {
+    width: 100%;
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding-inline: var(--page-padding);
+  }
+  .unix-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    min-height: var(--button-height);
+    padding-inline: var(--spacing-6);
+    padding-block: var(--spacing-3);
+    border: var(--border-width) solid transparent;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-body--line-height);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity var(--motion-fast);
+  }
+  .unix-button:disabled {
+    cursor: not-allowed;
+    opacity: var(--disabled-opacity);
+  }
+  .unix-button--primary {
+    background: var(--color-cta);
+    color: var(--color-white);
+  }
+  .unix-button--brand {
+    background: var(--color-brand);
+    color: var(--color-white);
+  }
+  .unix-button--muted {
+    background: var(--color-card-muted);
+    color: var(--color-cta);
+  }
+  .unix-button--outline {
+    background: transparent;
+    color: var(--color-cta);
+    border-color: currentColor;
+  }
+  .unix-button--compact {
+    min-height: var(--button-compact-height);
+  }
+  .unix-button--full {
+    width: 100%;
+  }
+  .unix-section-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-pill);
+    background: var(--color-chip);
+    color: var(--color-chip-text);
+    font-size: var(--text-label);
+    line-height: var(--text-label--line-height);
+    font-weight: var(--font-weight-semibold);
+  }
+  .unix-section-title {
+    margin: var(--spacing-0);
+    color: var(--color-title);
+    font-size: var(--text-h2);
+    line-height: var(--text-h2--line-height);
+    font-weight: var(--font-weight-bold);
+    overflow-wrap: break-word;
+  }
+  .unix-section-title--h3 {
+    font-size: var(--text-h3);
+    line-height: var(--text-h3--line-height);
+  }
+  .unix-section-title__highlight {
+    color: var(--color-brand);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unix-button {
+    transition: none;
+  }
+}

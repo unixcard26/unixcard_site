@@ -1,0 +1,3 @@
+# Usa o binário pré-compilado, sem executar scripts desta dependência.
+allowBuilds:
+  unrs-resolver: false

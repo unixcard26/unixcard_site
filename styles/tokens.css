@@ -1,0 +1,163 @@
+/* Fonte única dos valores visuais. Tailwind v4 lê os tokens pelo @theme. */
+@theme inline {
+  --font-sans: var(--font-poppins), Arial, sans-serif;
+  --color-title: #06146d;
+  --color-cta: #0a2750;
+  --color-brand: #0089ff;
+  --color-card-muted: #addfff;
+  --color-chip: #cfeeff;
+  --color-chip-text: #006ed9;
+  --color-ink: #172435;
+  --color-secondary: #53627a;
+  --color-border: #e3eaf2;
+  --color-white: #ffffff;
+  --color-surface-50: #f3f7fc;
+  --color-surface-100: #eef8ff;
+  --color-surface-200: #e4f1fe;
+  --color-surface-300: #dfe6ef;
+  --color-icon-surface: #ebf7fd;
+  --color-overlay: #061b3d;
+  --color-gradient-1: #c0e8fc;
+  --color-gradient-2: #4aa3ce;
+  --color-gradient-3: #00559b;
+  --color-gradient-4: #001b4c;
+  --spacing-0: 0;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --text-hero: 36px;
+  --text-hero--line-height: 1.08;
+  --text-h2: 30px;
+  --text-h2--line-height: 1.12;
+  --text-h3: 24px;
+  --text-h3--line-height: 1.15;
+  --text-card: 18px;
+  --text-card--line-height: 1.2;
+  --text-body: 16px;
+  --text-body--line-height: 1.5;
+  --text-secondary: 14px;
+  --text-secondary--line-height: 1.45;
+  --text-label: 12px;
+  --text-label--line-height: 1.2;
+  --text-label-lg: 13px;
+  --text-label-lg--line-height: 1.2;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 4px 16px rgb(23 36 53 / 6%);
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --container-content: 1200px;
+}
+
+:root {
+  --page-padding: var(--spacing-6);
+  --button-height: var(--spacing-14);
+  --button-compact-height: var(--spacing-12);
+  --border-width: 1px;
+  --focus-width: 3px;
+  --focus-offset: var(--spacing-1);
+  --disabled-opacity: 0.5;
+  --motion-fast: 160ms;
+  /* Direção vertical, seguindo a composição enviada; editável aqui. */
+  --gradient-background: linear-gradient(
+    180deg,
+    var(--color-gradient-1) 0%,
+    var(--color-gradient-2) 45%,
+    var(--color-gradient-3) 71%,
+    var(--color-gradient-4) 94%
+  );
+  --gradient-overlay: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--color-overlay) 35%,
+    var(--color-overlay) 100%
+  );
+}
+
+@media (max-width: 359px) {
+  :root {
+    --page-padding: var(--spacing-5);
+  }
+}
+
+:root {
+  --header-height: 72px;
+  --logo-width: 80px;
+  --logo-desktop-width: 132px;
+  --bottom-nav-height: 72px;
+  --nav-inactive: #a6bfdf;
+  --header-background: #0a1d31;
+  --shadow-navigation: 0 -4px 24px rgb(10 39 80 / 7%);
+  --shadow-floating: 0 4px 20px rgb(10 39 80 / 18%);
+  --menu-max-width: 440px;
+  --cookie-max-width: 720px;
+  --cookie-max-height: 65dvh;
+  --demo-scroll-height: 55vh;
+  --z-nav: 30;
+  --z-menu-trigger: 40;
+  --z-cookie: 50;
+  --z-skip: 60;
+}
+
+/* Etapa 3: valores usados exclusivamente na Home. */
+:root {
+  --home-hero-gradient: linear-gradient(180deg, #0a1d31, #0e3271);
+  --home-card-blue: #007bdd;
+  --home-app-gradient: linear-gradient(110deg, #0e2d68, #123f8a);
+  --home-hero-height: 355px;
+  --home-hero-image-width: 252px;
+  --home-hero-image-height: 336px;
+  --home-hero-copy-width: 290px;
+  --home-hero-image-top: 62px;
+  --home-hero-font: 36px;
+  --home-hero-line-height: 1.08;
+  --home-quick-radius: 24px;
+  --home-product-width: 210px;
+  --home-product-image-height: 136px;
+  --home-product-min-height: 230px;
+  --home-logo-height: 80px;
+  --home-ecosystem-item: 114px;
+  --home-ecosystem-duration: 16s;
+  --home-hero-desktop-height: 480px;
+  --home-hero-desktop-font: 52px;
+  --home-hero-desktop-image: 430px;
+  --home-dialog-width: 400px;
+  --home-heading-width: 760px;
+  --home-hero-text-shadow: 0 1px 8px rgb(10 29 49 / 40%);
+  --home-card-rotation: -24deg;
+  --home-partner-map-height: 128px;
+}
+
+/* Etapa 4: valores exclusivos da página Sobre a Unixcard. */
+:root {
+  --institutional-background: linear-gradient(120deg, #021022, #002644);
+  --institutional-highlight: #04c7df;
+  --institutional-map-height: 300px;
+  --institutional-diagram-max: 420px;
+  --institutional-diagram-ratio: 1;
+  --institutional-node-size: 29%;
+  --institutional-diagram-label: 12px;
+  --institutional-purpose-height: 540px;
+  --institutional-purpose-image: 420px;
+  --institutional-purpose-image-top: 160px;
+  --institutional-letter-spacing: -0.035em;
+  --institutional-timeline-mark: 64px;
+  --institutional-line-width: 2px;
+  --institutional-heading-max: 760px;
+}
