@@ -20,6 +20,7 @@ import { products as data } from '@/data/products';
 import { Header, Footer, BottomNav, CookieBanner } from '@/components/layout';
 import { Button, Container, SectionChip, SectionTitle } from '@/components/ui';
 import styles from './products.module.css';
+import { SectionUrlSync } from '@/components/layout/section-url-sync';
 
 function getOrigin() {
   try {
@@ -169,6 +170,7 @@ export default function ProductsPage() {
         {data.skip}
       </a>
       <Header variant="light" preloadLogo={false} />
+      <SectionUrlSync ids={["conteudo", "solucoes", "outras-solucoes", "conexao", "motivos", "solidez"]} />
       <main id="conteudo">
         <section className={styles.hero}>
           <Container className={styles.heroGrid}>
@@ -266,7 +268,7 @@ export default function ProductsPage() {
               ))}
             </div>
           </section>
-          <section className={styles.section}>
+          <section id="outras-solucoes"  className={styles.section}>
             <Intro {...data.more} />
             <Rows items={data.more.items} />
           </section>
@@ -290,7 +292,7 @@ export default function ProductsPage() {
               ))}
             </div>
           </section>
-          <section className={styles.section}>
+          <section id="conexao" className={styles.section}>
             <Intro {...data.ecosystem} />
             <div className={styles.ecosystem}>
               <div className={styles.diagram}>
@@ -328,11 +330,11 @@ export default function ProductsPage() {
               </Button>
             </div>
           </section>
-          <section className={styles.section}>
+          <section id="motivos" className={styles.section}>
             <Intro {...data.benefits} />
             <Rows items={data.benefits.items} />
           </section>
-          <section className={styles.section}>
+          <section id="solidez" className={styles.section}>
             <Intro {...data.trust} />
             <Rows items={data.trust.items} />
           </section>

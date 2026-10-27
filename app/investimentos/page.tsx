@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,6 +19,7 @@ import { home } from '@/data/home';
 import { Header, Footer, BottomNav, CookieBanner } from '@/components/layout';
 import { Button, Container, SectionChip, SectionTitle } from '@/components/ui';
 import styles from './investments.module.css';
+import { SectionUrlSync } from '@/components/layout/section-url-sync';
 
 function getOrigin() {
   try {
@@ -217,6 +219,7 @@ export default function InvestmentsPage() {
         {data.ui.skip}
       </a>
       <Header variant="light" preloadLogo={false} />
+      <SectionUrlSync ids={["conteudo", "opcoes", "lc-limite", "como-funciona", "tributacao", "como-investir", "faq"]} />
       <main id="conteudo" className={styles.page}>
         <section className={styles.hero}>
           <div className={styles.heroInner}>
@@ -355,7 +358,7 @@ export default function InvestmentsPage() {
               ))}
             </ol>
           </section>
-          <section className={styles.section} id="duvidas">
+          <section className={styles.section} id="faq">
             <Intro {...data.faq} />
             <div className={styles.faq}>
               {data.faq.items.map((item, index) =>

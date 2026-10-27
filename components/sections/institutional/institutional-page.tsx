@@ -1,3 +1,4 @@
+import { SectionUrlSync } from '@/components/layout/section-url-sync';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -63,12 +64,13 @@ function Intro({
 export function InstitutionalPage() {
   return (
     <div className={`site-shell ${styles.page}`}>
+    <SectionUrlSync ids={["hero", "conteudo", "ecossistema", "solucoes", "faq", "contato"]} />
       <a href="#conteudo" className="skip-link">
         {data.ui.skip}
       </a>
       <Header variant="light" preloadLogo={false} />
       <main id="conteudo">
-        <section className={styles.hero}>
+        <section id="hero" className={styles.hero}>
           <Container className={styles.heroGrid}>
             <div className={styles.heroCopy}>
               <h1>
@@ -276,7 +278,7 @@ export function InstitutionalPage() {
           </Container>
         </section>
         <Container>
-          <section className={styles.section}>
+          <section id="faq" className={styles.section}>
             <Intro {...data.faq} />
             <div className={styles.faq}>
               {data.faq.items.map((item, i) =>
@@ -319,7 +321,7 @@ export function InstitutionalPage() {
                 {data.closing.primary}
                 <ArrowRight aria-hidden="true" />
               </Button>
-              <Button
+              <Button id="contato"
                 href={data.closing.secondaryHref}
                 variant="outline"
                 size="compact"

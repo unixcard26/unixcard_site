@@ -7,6 +7,7 @@ import { home, type HomeItem } from '@/data/home';
 import { HomeIcon } from './home-icon';
 import { Ecosystem, PendingAccess, ProductCarousel } from './home-interactions';
 import styles from './home.module.css';
+import { SectionUrlSync } from "@/components/layout/section-url-sync";
 function Intro({
   chip,
   title,
@@ -68,6 +69,7 @@ function Row({
 export function HomePage() {
   return (
     <div className={`site-shell ${styles.home}`}>
+      <SectionUrlSync ids={["conteudo", "sobre", "solucoes", "para-voce", "para-empresas", "parceiros", "diferenciais", "confianca", "faq", "contato"]} />
       <a className="skip-link" href="#conteudo">
         {home.ui.skip}
       </a>
