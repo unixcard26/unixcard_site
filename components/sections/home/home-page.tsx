@@ -317,14 +317,6 @@ export function HomePage() {
                 ),
               )}
             </div>
-            <Link
-              href={home.faq.href}
-              className={styles.textLink}
-              data-track="home-faq-todas"
-            >
-              {home.faq.cta}
-              <ArrowRight aria-hidden="true" />
-            </Link>
           </section>
           <section id="contato" className={styles.section}>
             <Intro {...home.contact} />

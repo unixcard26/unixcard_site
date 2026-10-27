@@ -258,12 +258,12 @@ export const home = {
     cta: 'Ver todas as perguntas',
     href: '/ajuda',
     items: [
-      { question: 'O que é a Unixcard?' },
-      { question: 'A Unixcard é um banco?' },
-      { question: 'Quais são os produtos e serviços?' },
-      { question: 'Onde posso usar meus cartões?' },
-      { question: 'Como solicitar um cartão?' },
-      { question: 'Como aumentar o limite?' },
+      { question: 'O que é a Unixcard?', answer: 'A Unixcard é uma instituição financeira que oferece produtos e serviços bancários digitais.' },
+      { question: 'A Unixcard é um banco?', answer: 'Não, a Unixcard é uma instituição financeira que oferece produtos e serviços bancários digitais, mas não é um banco tradicional.' },
+      { question: 'Quais são os produtos e serviços?', answer: 'Oferecemos uma variedade de produtos e serviços bancários digitais, incluindo cartões de crédito, contas digitais e outros serviços financeiros.' },
+      { question: 'Onde posso usar meus cartões?', answer: 'Os cartões Unixcard podem ser usados em qualquer estabelecimento credenciado, além de todos os supermercados Brasil atacadista e Imperatriz.' },
+      { question: 'Como solicitar um cartão?', answer: 'Você pode solicitar um cartão Unixcard através do nosso app, preenchendo o formulário de solicitação e aguardando a análise do seu pedido.' },
+      { question: 'Como aumentar o limite?', answer: 'Para aumentar o limite do seu cartão, você pode entrar em contato com o nosso atendimento especializado.' },
     ] as HomeFaq[],
   },
   contact: {
